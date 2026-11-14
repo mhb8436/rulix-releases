@@ -4,9 +4,9 @@
      링크가 docs/ 로 시작하는 것은 배포 repo 루트 기준이기 때문이다. -->
 # RULIX — 데스크톱 앱과 CLI, 같은 엔진
 
-> Java, JavaScript, HTML, CSS, SQL, XML을 **535개 규칙**으로 점검합니다.
+> Java, JavaScript, Python, HTML, CSS, SQL, XML을 **632개 규칙**으로 점검합니다.
 > 한 번 내려받으면 데스크톱 앱과 명령행 바이너리가 함께 들어 있습니다.
-> JVM도 Node.js도 파이썬도 필요 없고, 인터넷이 끊긴 환경에서 그대로 돕니다.
+> JVM도 Node.js도 파이썬 런타임도 필요 없고, 인터넷이 끊긴 환경에서 그대로 돕니다.
 
 [![Release](https://img.shields.io/github/v/release/mhb8436/rulix-releases?label=release&color=2f855a)](https://github.com/mhb8436/rulix-releases/releases/latest)
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](#설치)
@@ -232,7 +232,11 @@ rulix ./src --profile=all --lang=en
 | `spring` | Spring / Boot 개발 표준 | 32 | 28 |
 | `egov` | 전자정부 표준프레임워크 | 33 | 12 |
 | `ddl` | DDL × 쿼리 교차 분석 (`--ddl` 필요) | 17 | 17 |
-| | **합계** | **535** | **453** |
+| `python-quality` | Python 정확성 — 기본값, 예외, 타입 선언, 파일·태스크 수명, 외부 명령 결과 | 16 | 16 |
+| `python-secure` | KISA「Python 시큐어코딩 가이드」 — 삽입 공격, 역직렬화, 암호, 비밀값, CSRF, 요청값 흐름, Django·Jinja 템플릿, 취약한 고정 의존 패키지(`--vuln-db`) | 49 | 49 |
+| `python-performance` | Python 성능 — HTTP 타임아웃, 비동기 함수 안의 동기 호출, N+1 질의, 반복 안 요청, pandas 행 순회 | 16 | 16 |
+| `python-maintainability` | Python 유지보수성 — 인자·분기·중첩, 모듈·클래스 크기, 와일드카드 import | 16 | 12 |
+| | **합계** | **632** | **546** |
 
 일부 규칙은 꺼진 채로 배포합니다. 결함이 아니라 팀 취향에 가까운 항목들이고,
 대부분 SQL 포맷과 전자정부 관례입니다. 데스크톱 앱 규칙 탭이나 오버라이드

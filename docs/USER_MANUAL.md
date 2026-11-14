@@ -7,13 +7,13 @@
 
 ## 1. Overview
 
-RULIX analyses Java, JavaScript, HTML, CSS, SQL and XML source against development
+RULIX analyses Java, JavaScript, Python, HTML, CSS, SQL and XML source against development
 standards. It comes as a desktop app and a command-line tool, both sitting on the
 same rule engine.
 
 **What it does**
 
-- 535 rules built in (453 on by default)
+- 632 rules built in (546 on by default)
 - Desktop app (Windows, macOS) and CLI (Windows, macOS, Linux)
 - Rule selections save as a YAML snapshot — CI repeats what you decided in the app
 - An editor inside the app — read and fix the source and the ruleset YAML, then re-check
@@ -1060,7 +1060,11 @@ RULIX collects files by extension:
 | spring | 32 | 28 | DI patterns, @Transactional, REST APIs, security |
 | egov | 33 | 12 | layer naming, Service/Mapper, common components |
 | ddl | 17 | 17 | table and column existence, index usage, DDL improvements |
-| **Total** | **535** | **453** | |
+| python-quality | 16 | 16 | defaults, exceptions, type contracts, file and task lifetimes, subprocess results |
+| python-secure | 49 | 49 | injection, deserialization, crypto, secrets, CSRF, request-value flows, Django/Jinja templates, vulnerable pinned dependencies (`--vuln-db`) |
+| python-performance | 16 | 16 | HTTP timeouts, blocking calls in async code, N+1 queries, per-iteration requests, pandas row iteration |
+| python-maintainability | 16 | 12 | parameters, branches, nesting, module and class size, wildcard imports |
+| **Total** | **632** | **546** | |
 
 > **On** means `enabled: true` — only those run. The rest are switched off because they overlap with another profile, or because they encode a preference rather than a defect.
 

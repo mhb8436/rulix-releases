@@ -7,13 +7,13 @@
 
 ## 1. 개요
 
-RULIX는 Java, JavaScript, HTML, CSS, SQL, XML 소스코드를 개발 표준에 따라
+RULIX는 Java, JavaScript, Python, HTML, CSS, SQL, XML 소스코드를 개발 표준에 따라
 정적 분석합니다. 데스크톱 앱과 명령행 도구 두 가지로 쓸 수 있고, 둘은 같은 룰
 엔진 위에 올라가 있습니다.
 
 **주요 특징**
 
-- 535개 검사 규칙 내장 (453개 기본 활성)
+- 632개 검사 규칙 내장 (546개 기본 활성)
 - 데스크톱 앱(Windows / macOS)과 CLI(Windows / macOS / Linux)
 - 규칙 선택을 YAML 스냅샷으로 저장 — 앱에서 정한 규칙을 CI가 그대로 재현
 - 앱 안에 편집기 내장 — 소스와 룰셋 YAML을 보고 고치고 바로 다시 검사
@@ -1060,7 +1060,11 @@ RULIX는 확장자 기반으로 파일을 수집합니다:
 | spring | 32 | 28 | DI 패턴, @Transactional, REST API, 보안 |
 | egov | 33 | 12 | 레이어 명명, Service/Mapper, 공통컴포넌트 |
 | ddl | 17 | 17 | 테이블·컬럼 존재성, 인덱스 활용, DDL 개선 |
-| **합계** | **535** | **453** | |
+| python-quality | 16 | 16 | 기본값, 예외, 타입 선언, 파일·태스크 수명, 외부 명령 결과 |
+| python-secure | 49 | 49 | 삽입 공격, 역직렬화, 암호, 비밀값, CSRF, 요청값 흐름, Django·Jinja 템플릿, 취약한 고정 의존 패키지(`--vuln-db`) |
+| python-performance | 16 | 16 | HTTP 타임아웃, 비동기 함수 안의 동기 호출, N+1 질의, 반복 안 요청, pandas 행 순회 |
+| python-maintainability | 16 | 12 | 인자·분기·중첩, 모듈·클래스 크기, 와일드카드 import |
+| **합계** | **632** | **546** | |
 
 > **활성 규칙**: `enabled: true`인 규칙만 검사에 적용됩니다. 비활성 규칙은 다른 프로파일과 중복되어 `enabled: false`로 설정된 것입니다.
 

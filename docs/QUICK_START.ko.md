@@ -166,7 +166,11 @@ AI 감리 보고서의 입력으로는 JSON을 씁니다.
 | `spring` | DI, @Transactional, Controller | 32 | 28 |
 | `egov` | 전자정부 계층/명명/공통 컴포넌트 | 33 | 12 |
 | `ddl` | DDL × 쿼리 교차 분석 (`--ddl` 필요) | 17 | 17 |
-| | **합계** | **535** | **453** |
+| `python-quality` | Python 정확성 — 기본값, 예외, 타입 선언, 파일·태스크 수명, 외부 명령 결과 | 16 | 16 |
+| `python-secure` | KISA「Python 시큐어코딩 가이드」 — 삽입 공격, 역직렬화, 암호, 비밀값, CSRF, 요청값 흐름, Django·Jinja 템플릿, 취약한 고정 의존 패키지(`--vuln-db`) | 49 | 49 |
+| `python-performance` | Python 성능 — HTTP 타임아웃, 비동기 함수 안의 동기 호출, N+1 질의, 반복 안 요청, pandas 행 순회 | 16 | 16 |
+| `python-maintainability` | Python 유지보수성 — 인자·분기·중첩, 모듈·클래스 크기, 와일드카드 import | 16 | 12 |
+| | **합계** | **632** | **546** |
 
 일부 규칙은 꺼진 채로 배포합니다. 결함이 아니라 팀 취향에 가까운 항목이라
 그렇고, 대부분 SQL 포맷과 전자정부 관례입니다. 규칙 탭이나 오버라이드 파일에서

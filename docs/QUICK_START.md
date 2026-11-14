@@ -181,7 +181,11 @@ English by default; Korean is one of the languages you can pick here.
 | `spring` | DI, `@Transactional`, controllers | 32 | 28 |
 | `egov` | eGovernment layering, naming, common components | 33 | 12 |
 | `ddl` | DDL × query cross-analysis (needs `--ddl`) | 17 | 17 |
-| | **Total** | **535** | **453** |
+| `python-quality` | Python correctness — defaults, exceptions, type contracts, file and task lifetimes, subprocess results | 16 | 16 |
+| `python-secure` | KISA Python secure coding guide — injection, deserialization, crypto, secrets, CSRF, request-value flows, Django/Jinja templates, vulnerable pinned dependencies (`--vuln-db`) | 49 | 49 |
+| `python-performance` | Python performance — HTTP timeouts, blocking calls in async code, N+1 queries, per-iteration requests, pandas row iteration | 16 | 16 |
+| `python-maintainability` | Python maintainability — parameters, branches, nesting, module and class size, wildcard imports | 16 | 12 |
+| | **Total** | **632** | **546** |
 
 Some rules ship switched off. They encode a team preference rather than a
 defect — mostly SQL formatting and eGovernment conventions. Turn them on in the

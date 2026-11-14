@@ -4,9 +4,9 @@
      링크가 docs/ 로 시작하는 것은 배포 repo 루트 기준이기 때문이다. -->
 # RULIX — static analysis that runs where your code cannot leave
 
-> Static analysis for Java, JavaScript, HTML, CSS, SQL and XML. **535 rules**,
+> Static analysis for Java, JavaScript, Python, HTML, CSS, SQL and XML. **632 rules**,
 > a desktop app and a CLI over one engine, an editor built in, and **nothing
-> leaves the machine**. Unzip and run — no JVM, no Node.js, no Python.
+> leaves the machine**. Unzip and run — no JVM, no Node.js, no Python runtime.
 
 [![Release](https://img.shields.io/github/v/release/mhb8436/rulix-releases?label=release&color=2f855a)](https://github.com/mhb8436/rulix-releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/mhb8436/rulix-releases/total?color=2f855a)](https://github.com/mhb8436/rulix-releases/releases)
@@ -264,7 +264,11 @@ Profiles group rules by purpose. Combine them with commas.
 | `spring` | Spring / Boot conventions | 32 | 28 |
 | `egov` | eGovernment Framework standards | 33 | 12 |
 | `ddl` | DDL × query cross-analysis (needs `--ddl`) | 17 | 17 |
-| | **Total** | **535** | **453** |
+| `python-quality` | Python correctness — defaults, exceptions, type contracts, file and task lifetimes, subprocess results | 16 | 16 |
+| `python-secure` | KISA Python secure coding guide — injection, deserialization, crypto, secrets, CSRF, request-value flows, Django/Jinja templates, vulnerable pinned dependencies (`--vuln-db`) | 49 | 49 |
+| `python-performance` | Python performance — HTTP timeouts, blocking calls in async code, N+1 queries, per-iteration requests, pandas row iteration | 16 | 16 |
+| `python-maintainability` | Python maintainability — parameters, branches, nesting, module and class size, wildcard imports | 16 | 12 |
+| | **Total** | **632** | **546** |
 
 Some rules ship switched off because they encode a team preference rather than
 a defect — SQL formatting and several eGovFrame conventions, mostly. Turn them
